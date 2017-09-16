@@ -37,16 +37,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		if(index < 0 || index >= students.length)
-			throw IllegalArgumentException;
+		// if(index < 0 || index >= students.length)
+		// 	throw IllegalArgumentException;
 		return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(student == NULL || index < 0 || index >= students.length)
-			throw IllegalArgumentException;
+		// if(student == NULL || index < 0 || index >= students.length)
+		// 	throw IllegalArgumentException;
 		students[index] = student;
 	}
 
