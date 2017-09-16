@@ -130,7 +130,7 @@ public class StudentGroup implements StudentArrayOperation {
 	// 	for(j=0;j<index;j++)
 	// 		students[j] = this.students[j];		
 	// 	this.students = students;
-	// }
+	 }
 
 	@Override
 	public void removeFromElement(Student student) {
