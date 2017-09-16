@@ -123,18 +123,31 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
-	// 	if(index < 0 || index >= this.students.length)
-	// 		throw new IllegalArgumentException();
-	// 	Student[] students = new Student[index];
-	// 	int j;
-	// 	for(j=0;j<index;j++)
-	// 		students[j] = this.students[j];		
-	// 	this.students = students;
+		if(index < 0 || index >= this.students.length)
+			throw new IllegalArgumentException();
+		Student[] students = new Student[index];
+		int j;
+		for(j=0;j<index;j++)
+			students[j] = this.students[j];		
+		this.students = students;
 	 }
 
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		if(student == null)
+			throw new IllegalArgumentException();
+		int j;
+		for(j=0;j<this.students.length;j++)
+			if(this.students[j].equals(student))
+				break;
+		if(j==this.students.length)
+			return;
+		int index = j;
+		Student[] students = new Student[index];
+		for(j=0;j<index;j++)
+			students[j] = this.students[j];		
+		this.students = students;
 	}
 
 	@Override
@@ -150,6 +163,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+        int n = this.students.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (this.students[j].compareTo(this.students[j+1])>0)
+                {
+                    // swap temp and arr[i]
+                    Student temp = this.students[j];
+                    this.students[j] = this.students[j+1];
+                    this.students[j+1] = temp;
+                }
 	}
 
 	@Override
